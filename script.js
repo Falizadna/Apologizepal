@@ -1,4 +1,3 @@
-
 const nameCard = document.getElementById('nameCard');
 const apologyCard = document.getElementById('apologyCard');
 const nicknameInput = document.getElementById('nickname');
@@ -18,7 +17,7 @@ let nickname = '';
 submitName.addEventListener('click', () => {
   nickname = nicknameInput.value.trim();
   if (!nickname) {
-	alert('Isi dulu nama panggilan kamu dong babe😳');
+	alert('Isi dulu nama panggilan kamu dong 😳');
 	return;
   }
 
@@ -26,9 +25,9 @@ submitName.addEventListener('click', () => {
   apologyCard.style.display = 'block';
 
   const apologyTitle = apologyCard.querySelector('h1');
-  apologyTitle.textContent = `${nickname}, aku minta maaf sayang🥺💖`;
+  apologyTitle.textContent = `${nickname}, aku minta maaf 🥺💖`;
 
-  apologyText.innerHTML = `Aku gak bermaksud bikin kamu kesel.<br>Maafin aku, ya sayang? 😢`;
+  apologyText.innerHTML = `Aku gak bermaksud bikin kamu kesel.<br>Maafin aku, ya? 😢`;
 });
 
 noBtn.addEventListener('click', () => {
@@ -42,8 +41,8 @@ noBtn.addEventListener('click', () => {
 
 yesBtn.addEventListener('click', () => {
   popup.classList.add('active');
-  popupTitle.textContent = `Makasih ya cantiknya aku, ${nickname} 💕`;
-  popupMsg.textContent = `Aku janji gak bakal bikin kamu kesel lagi yang🥺✨`;
+  popupTitle.textContent = `Makasih ya, ${nickname} 💕`;
+  popupMsg.textContent = `Aku janji gak bakal bikin kamu kesel lagi 🥺✨`;
   generateHearts();
   setTimeout(() => {
 	popup.classList.remove('active');
