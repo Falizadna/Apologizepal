@@ -13,24 +13,22 @@ const popupMsg = document.getElementById('popupMsg');
 let noScale = 1.0;
 let yesScale = 1.0;
 
-// Nama fix (abaikan input pengguna)
+// Nama tetap
 const FIXED_NAME = 'ayang nuy';
 
 submitName.addEventListener('click', () => {
-  // opsional: paksa isi input jadi 'ayang nuy' biar konsisten juga di UI
-  if (nicknameInput) nicknameInput.value = FIXED_NAME;
+  // Abaikan input pengguna, selalu gunakan FIXED_NAME
+  nicknameInput.value = FIXED_NAME;
 
-  // tampilkan kartu minta maaf
   nameCard.style.display = 'none';
   apologyCard.style.display = 'block';
 
-  // set judul & isi
   const apologyTitle = apologyCard.querySelector('h1');
   apologyTitle.textContent = `${FIXED_NAME}, aku minta maaf 🥺💖`;
+
   apologyText.innerHTML = `Aku gak bermaksud bikin kamu kesel.<br>Maafin aku, ya? 😢`;
 });
 
-// tombol “Enggak”
 noBtn.addEventListener('click', () => {
   noScale = Math.max(0.3, noScale - 0.1);
   yesScale = Math.min(1.8, yesScale + 0.1);
@@ -38,7 +36,6 @@ noBtn.addEventListener('click', () => {
   yesBtn.style.transform = `scale(${yesScale})`;
 });
 
-// tombol “Maafin”
 yesBtn.addEventListener('click', () => {
   popup.classList.add('active');
   popupTitle.textContent = `Makasih ya, ${FIXED_NAME} 💕`;
@@ -55,7 +52,6 @@ yesBtn.addEventListener('click', () => {
   }, 5000);
 });
 
-// animasi hati
 function generateHearts() {
   for (let i = 0; i < 12; i++) {
     const heart = document.createElement('div');
