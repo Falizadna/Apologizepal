@@ -25,7 +25,7 @@ submitName.addEventListener('click', () => {
   apologyCard.style.display = 'block';
 
   const apologyTitle = apologyCard.querySelector('h1');
-  apologyTitle.textContent = `${nickname}, aku minta maaf 🥺💖`;
+  apologyTitle.textContent = `$ayang nuy, aku minta maaf 🥺💖`;
 
   apologyText.innerHTML = `Aku gak bermaksud bikin kamu kesel.<br>Maafin aku, ya? 😢`;
 });
@@ -41,7 +41,7 @@ noBtn.addEventListener('click', () => {
 
 yesBtn.addEventListener('click', () => {
   popup.classList.add('active');
-  popupTitle.textContent = `Makasih ya, ayang nuy 💕`;
+  popupTitle.textContent = `Makasih ya, $ayang nuy 💕`;
   popupMsg.textContent = `Aku janji gak bakal bikin kamu kesel lagi 🥺✨`;
   generateHearts();
   setTimeout(() => {
@@ -64,4 +64,5 @@ function generateHearts() {
 	setTimeout(() => heart.remove(), 2000);
   }
 }
+
 
