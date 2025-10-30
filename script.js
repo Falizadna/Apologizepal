@@ -41,7 +41,7 @@ noBtn.addEventListener('click', () => {
 
 yesBtn.addEventListener('click', () => {
   popup.classList.add('active');
-  popupTitle.textContent = `Makasih ya, ${nickname} 💕`;
+  popupTitle.textContent = `Makasih ya, ayang nuy 💕`;
   popupMsg.textContent = `Aku janji gak bakal bikin kamu kesel lagi 🥺✨`;
   generateHearts();
   setTimeout(() => {
@@ -64,3 +64,4 @@ function generateHearts() {
 	setTimeout(() => heart.remove(), 2000);
   }
 }
+
